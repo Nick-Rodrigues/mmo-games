@@ -1,20 +1,17 @@
 import { RouteProp, useRoute } from '@react-navigation/native';
-import { ScreenContent } from 'components/ScreenContent';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
+import { ScreenContent } from 'components/ScreenContent';
 import { RootStackParamList } from '../navigation';
 
 type DetailsSreenRouteProp = RouteProp<RootStackParamList, 'Details'>;
 
 export default function Details() {
-  const router = useRoute<DetailsSreenRouteProp>();
+  const router = useRoute();
 
   return (
     <View style={styles.container}>
-      <ScreenContent
-        path="screens/details.tsx"
-        title={`Showing details for user ${router.params.name}`}
-      />
+      <Text>{router.params.gamesDetails.short_description}</Text>
     </View>
   );
 }
