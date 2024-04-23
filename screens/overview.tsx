@@ -63,5 +63,4 @@ const styles = StyleSheet.create({
   image: { width: 80, height: 80, borderRadius: 5 },
   textContainer: { marginLeft: 12 },
   title: { fontSize: 18, fontWeight: 'bold' },
-  genre: { fontSize: 14, marginTop: 4, color: '#888' },
 });
